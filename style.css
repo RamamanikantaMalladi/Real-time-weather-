@@ -23,42 +23,30 @@ linear-gradient(
 }
 
 .card{
+   width:95%;
+   max-width:1100px;
 
-width:90%;
-max-width:900px;
+   margin:auto;
 
-background:
-linear-gradient(
-rgba(0,0,0,.15),
-rgba(0,0,0,.25)
-);
+   border-radius:25px;
 
-background-size:cover;
-background-position:center;
-
-border-radius:25px;
-
-padding:40px 35px;
-
-color:white;
-
-text-align:center;
-
-box-shadow:
-0 15px 50px rgba(0,0,0,.25);
-
-border:
-2px solid rgba(255,255,255,.15);
+   overflow:hidden;
 }
 
 .logo{
-width:120px;
-margin-bottom:15px;
+    width:120px;
+    max-width:100%;
 }
 
 .card h1{
-font-size:48px;
-font-weight:700;
+font-size:72px;
+}
+@media(max-width:768px){
+
+.card h1{
+    font-size:42px;
+    line-height:1.2;
+}
 }
 
 .card p{
@@ -67,26 +55,29 @@ margin-bottom:30px;
 }
 
 .search{
-display:flex;
-align-items:center;
-justify-content:space-between;
+    width:100%;
+    display:flex;
+    align-items:center;
 
-background:#fff;
+    background:#fff;
+    border-radius:50px;
 
-border-radius:60px;
-
-padding:10px 15px;
-
-margin-top:20px;
+    padding:10px 20px;
 }
 
 .search input{
-border:none;
-outline:none;
-flex:1;
+    flex:1;
+    width:100%;
+    min-width:0;
 
-font-size:18px;
-padding:10px;
+    border:none;
+    outline:none;
+
+    font-size:18px;
+}
+
+.search button{
+    flex-shrink:0;
 }
 
 .search button{
@@ -100,10 +91,9 @@ width:26px;
 }
 
 .weather-icon{
-width:140px;
-margin-top:20px;
+    width:120px;
+    max-width:100%;
 }
-
 .temp{
 font-size:64px;
 font-weight:700;
@@ -115,20 +105,21 @@ margin-bottom:20px;
 }
 
 .details{
+   display:flex;
+   justify-content:space-between;
+}
+@media(max-width:768px){
 
-margin-top:30px;
+.details{
 
-display:flex;
-justify-content:space-between;
+   display:grid;
 
-padding:25px;
+   grid-template-columns:
+   repeat(2,1fr);
 
-border-radius:20px;
+   gap:20px;
+}
 
-background:
-rgba(0,0,0,.30);
-
-backdrop-filter:blur(10px);
 }
 
 .col{
@@ -146,4 +137,76 @@ width:40px;
 .wind{
 font-size:24px;
 font-weight:600;
+}
+@media screen and (max-width:768px){
+
+.card{
+
+    width:95%;
+    padding:25px;
+}
+
+.logo{
+    width:100px;
+}
+
+.card h1{
+
+    font-size:42px;
+}
+
+.tagline{
+
+    font-size:18px;
+}
+
+.search{
+
+    width:100%;
+    padding:12px 15px;
+}
+
+.search input{
+
+    font-size:16px;
+}
+
+.weather-icon{
+
+    width:110px;
+}
+
+.temp{
+
+    font-size:48px;
+}
+
+.city{
+
+    font-size:28px;
+}
+
+.details{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+
+    padding:20px;
+}
+
+.col{
+
+    flex-direction:column;
+    text-align:center;
+}
+
+.col img{
+
+    width:35px;
+}
+
 }
